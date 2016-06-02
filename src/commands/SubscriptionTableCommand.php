@@ -13,14 +13,14 @@ class SubscriptionTableCommand extends Command
 	 * @var string
 	 */
 	protected $name = 'laravel-billing:subscription-table';
-	
+
 	/**
 	 * The console command description.
 	 *
 	 * @var string
 	 */
 	protected $description = 'Create a migration for the laravel-billing subscription table columns';
-	
+
 	/**
 	 * Execute the console command.
 	 *
@@ -29,14 +29,14 @@ class SubscriptionTableCommand extends Command
 	public function fire()
 	{
 		$full_path = $this->createBaseMigration();
-		
+
 		file_put_contents($full_path, $this->getMigrationStub());
-		
+
 		$this->info('Migration created successfully!');
-		
+
 		$this->call('dump-autoload');
 	}
-	
+
 	/**
 	 * Create a base migration file for the subscriptions.
 	 *
@@ -45,12 +45,12 @@ class SubscriptionTableCommand extends Command
 	protected function createBaseMigration()
 	{
 		$name = 'add_subscription_billing_columns_to_' . $this->argument('table');
-		
+
 		$path = $this->laravel['path'].'/database/migrations';
-		
+
 		return $this->laravel['migration.creator']->create($name, $path);
 	}
-	
+
 	/**
 	 * Get the contents of the subscription migration stub.
 	 *
@@ -59,17 +59,17 @@ class SubscriptionTableCommand extends Command
 	protected function getMigrationStub()
 	{
 		$stub = file_get_contents(__DIR__.'/../Mmanos/Billing/Stubs/SubscriptionMigration.stub');
-		
+
 		$stub = str_replace('subscription_table', $this->argument('table'), $stub);
 		$stub = str_replace(
 			'AddSubscriptionBillingColumnsTo',
 			'AddSubscriptionBillingColumnsTo' . Str::studly($this->argument('table')),
 			$stub
 		);
-		
+
 		return $stub;
 	}
-	
+
 	/**
 	 * Get the console command arguments.
 	 *

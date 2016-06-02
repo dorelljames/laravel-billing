@@ -1,4 +1,4 @@
-# Billing Package for Laravel 4
+# Billing Package for Laravel 5.1
 
 This package provides an expressive, fluent interface to a billing services gateway. It handles almost all of the boilerplate code for managing billing customers, subscriptions, and individual charges. The usage and feature set was heavily influenced by the popular [Laravel Cashier](http://laravel.com/docs/billing) package. However, it has these major differences:
 
@@ -98,10 +98,10 @@ public function subscriptionmodels()
 {
 	// Return an Eloquent relationship.
 	return $this->hasMany('Website');
-	
+
 	// Or, return an array or collection of models.
 	return Website::where('user_id', $this->id)->get();
-	
+
 	// Or, return an array of collections.
 	return array(
 		Website::where('user_id', $this->id)->get(),
@@ -131,7 +131,7 @@ public function customermodel()
 {
 	// Return an Eloquent relationship.
 	return $this->belongsTo('User', 'user_id');
-	
+
 	// Or, Return an Eloquent model.
 	return User::find($this->user_id);
 }

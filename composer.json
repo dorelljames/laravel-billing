@@ -1,8 +1,12 @@
 {
-    "name": "mmanos/laravel-billing",
-    "description": "A billing package for Laravel 4.",
+    "name": "dorelljames/laravel-billing",
+    "description": "A billing package for Laravel 5.1",
     "keywords": ["laravel", "billing", "stripe", "braintree", "cashier", "payments", "subscriptions", "charges"],
     "authors": [
+        {
+            "name": "Dorell James Galang",
+            "email": "galangdj@gmail.com"
+        },
         {
             "name": "Mark Manos",
             "email": "mark@airpac.com"
@@ -10,7 +14,7 @@
     ],
     "require": {
         "php": ">=5.4.0",
-        "illuminate/support": "~4.1",
+        "illuminate/support": "~5.1",
         "nesbot/carbon": "~1.0"
     },
     "require-dev": {
@@ -28,7 +32,7 @@
             "src/commands"
         ],
         "psr-0": {
-            "Mmanos\\Billing\\": "src/"
+            "DorellJames\\Billing\\": "src/"
         }
     },
     "minimum-stability": "stable",
