@@ -23,7 +23,7 @@ It currently comes bundled with drivers for these billing services:
 Add this to your composer.json file, in the require object:
 
 ```javascript
-"DorellJames/laravel-billing": "dev-master"
+"dorelljames/laravel-billing": "dev-master"
 ```
 
 After that, run composer install to install the package.
@@ -46,7 +46,7 @@ The following composer dependencies are needed for the listed billing gateways:
 Publish the default config file to your application so you can make modifications.
 
 ```console
-$ php artisan config:publish DorellJames/laravel-billing
+$ php artisan vendor:publish
 ```
 
 #### Customer Migration
@@ -79,7 +79,7 @@ Once the migration has been created, simply run the `migrate` command.
 
 #### Customer Model Setup
 
-Next, add the CustomerBillableTrait to your customer model definition:
+Next, add the CustomerBillableTrait to your customer model definition as seen below. Also let's make sure we make our `billing_trial_ends_at` and `billing_subscription_ends_at` `Carbon` instances so we could make use of its powerful functions later on.
 
 ```php
 use DorellJames\Billing\CustomerBillableTrait;
@@ -88,8 +88,11 @@ class User extends Eloquent
 {
 	use CustomerBillableTrait;
 
+	protected $dates = ['billing_trial_ends_at', 'billing_subscription_ends_at'];
 }
 ```
+
+
 
 You should also define a `subscriptionmodels` method that returns all models that represent any billing subscriptions for a customer. This allows the customer model to propagate credit card changes and status changes (if the customer is deleted) to all of it's subscription models.
 
