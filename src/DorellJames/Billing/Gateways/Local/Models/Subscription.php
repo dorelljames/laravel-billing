@@ -1,4 +1,4 @@
-<?php namespace Mmanos\Billing\Gateways\Local\Models;
+<?php namespace DorellJames\Billing\Gateways\Local\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletingTrait;
@@ -14,22 +14,22 @@ class Subscription extends Model
 
 	public function customer()
 	{
-		return $this->belongsTo('Mmanos\Billing\Gateways\Local\Models\Customer')->withTrashed();
+		return $this->belongsTo('DorellJames\Billing\Gateways\Local\Models\Customer')->withTrashed();
 	}
 
 	public function plan()
 	{
-		return $this->belongsTo('Mmanos\Billing\Gateways\Local\Models\Plan')->withTrashed();
+		return $this->belongsTo('DorellJames\Billing\Gateways\Local\Models\Plan')->withTrashed();
 	}
 
 	public function card()
 	{
-		return $this->belongsTo('Mmanos\Billing\Gateways\Local\Models\Card');
+		return $this->belongsTo('DorellJames\Billing\Gateways\Local\Models\Card');
 	}
 
 	public function coupon()
 	{
-		return $this->belongsTo('Mmanos\Billing\Gateways\Local\Models\Coupon')->withTrashed();
+		return $this->belongsTo('DorellJames\Billing\Gateways\Local\Models\Coupon')->withTrashed();
 	}
 
 	public function getPeriodStartedAtAttribute($value)

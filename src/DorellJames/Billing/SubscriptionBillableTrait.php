@@ -1,6 +1,6 @@
-<?php namespace Mmanos\Billing;
+<?php namespace DorellJames\Billing;
 
-use Mmanos\Billing\Facades\Billing;
+use DorellJames\Billing\Facades\Billing;
 use LogicException;
 
 trait SubscriptionBillableTrait
@@ -8,7 +8,7 @@ trait SubscriptionBillableTrait
 	/**
 	 * Return the gateway subscription object for this model.
 	 *
-	 * @return Mmanos\Billing\Gateways\SubscriptionInterface
+	 * @return DorellJames\Billing\Gateways\SubscriptionInterface
 	 */
 	public function gatewaySubscription()
 	{

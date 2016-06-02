@@ -1,6 +1,6 @@
-<?php namespace Mmanos\Billing\Gateways\Local;
+<?php namespace DorellJames\Billing\Gateways\Local;
 
-use Mmanos\Billing\Gateways\CustomerInterface;
+use DorellJames\Billing\Gateways\CustomerInterface;
 use Illuminate\Support\Arr;
 
 class Customer implements CustomerInterface

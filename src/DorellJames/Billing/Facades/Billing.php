@@ -1,4 +1,4 @@
-<?php namespace Mmanos\Billing\Facades;
+<?php namespace DorellJames\Billing\Facades;
 
 class Billing extends \Illuminate\Support\Facades\Facade
 {

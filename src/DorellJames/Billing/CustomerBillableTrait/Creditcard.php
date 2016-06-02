@@ -1,4 +1,4 @@
-<?php namespace Mmanos\Billing\CustomerBillableTrait;
+<?php namespace DorellJames\Billing\CustomerBillableTrait;
 
 use Illuminate\Support\Arr;
 
@@ -14,7 +14,7 @@ class Creditcard
 	/**
 	 * Credit card.
 	 *
-	 * @var \Mmanos\Billing\Gateways\CardInterface
+	 * @var \DorellJames\Billing\Gateways\CardInterface
 	 */
 	protected $card;
 
@@ -29,12 +29,12 @@ class Creditcard
 	 * Create a new CustomerBillableTrait Creditcard instance.
 	 *
 	 * @param \Illuminate\Database\Eloquent\Model    $model
-	 * @param \Mmanos\Billing\Gateways\CardInterface $card
+	 * @param \DorellJames\Billing\Gateways\CardInterface $card
 	 * @param array                                  $info
 	 *
 	 * @return void
 	 */
-	public function __construct(\Illuminate\Database\Eloquent\Model $model, \Mmanos\Billing\Gateways\CardInterface $card, array $info = null)
+	public function __construct(\Illuminate\Database\Eloquent\Model $model, \DorellJames\Billing\Gateways\CardInterface $card, array $info = null)
 	{
 		$this->model = $model;
 		$this->card = $card;

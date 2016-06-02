@@ -1,4 +1,4 @@
-<?php namespace Mmanos\Billing\CustomerBillableTrait;
+<?php namespace DorellJames\Billing\CustomerBillableTrait;
 
 use Illuminate\Support\Arr;
 
@@ -14,7 +14,7 @@ class InvoiceItem
 	/**
 	 * Invoice gateway instance.
 	 *
-	 * @var \Mmanos\Billing\Gateways\InvoiceInterface
+	 * @var \DorellJames\Billing\Gateways\InvoiceInterface
 	 */
 	protected $invoice;
 
@@ -36,12 +36,12 @@ class InvoiceItem
 	 * Create a new CustomerBillableTrait Invoice Item instance.
 	 *
 	 * @param \Illuminate\Database\Eloquent\Model       $model
-	 * @param \Mmanos\Billing\Gateways\InvoiceInterface $invoice
+	 * @param \DorellJames\Billing\Gateways\InvoiceInterface $invoice
 	 * @param array                                     $item
 	 *
 	 * @return void
 	 */
-	public function __construct(\Illuminate\Database\Eloquent\Model $model, \Mmanos\Billing\Gateways\InvoiceInterface$invoice, array $item)
+	public function __construct(\Illuminate\Database\Eloquent\Model $model, \DorellJames\Billing\Gateways\InvoiceInterface$invoice, array $item)
 	{
 		$this->model = $model;
 		$this->invoice = $invoice;
@@ -51,7 +51,7 @@ class InvoiceItem
 	/**
 	 * Return the subscription helper object associated with this invoice item.
 	 *
-	 * @return \Mmanos\Billing\SubscriptionBillableTrait\Subscription
+	 * @return \DorellJames\Billing\SubscriptionBillableTrait\Subscription
 	 */
 	public function subscription()
 	{

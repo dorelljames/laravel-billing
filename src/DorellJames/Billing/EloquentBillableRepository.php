@@ -1,4 +1,4 @@
-<?php namespace Mmanos\Billing;
+<?php namespace DorellJames\Billing;
 
 use Illuminate\Support\Facades\Config;
 

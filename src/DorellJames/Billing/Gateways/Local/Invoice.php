@@ -1,6 +1,6 @@
-<?php namespace Mmanos\Billing\Gateways\Local;
+<?php namespace DorellJames\Billing\Gateways\Local;
 
-use Mmanos\Billing\Gateways\InvoiceInterface;
+use DorellJames\Billing\Gateways\InvoiceInterface;
 use Illuminate\Support\Arr;
 
 class Invoice implements InvoiceInterface

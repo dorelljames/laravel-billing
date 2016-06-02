@@ -1,6 +1,6 @@
-<?php namespace Mmanos\Billing;
+<?php namespace DorellJames\Billing;
 
-use Mmanos\Billing\Facades\Billing;
+use DorellJames\Billing\Facades\Billing;
 use LogicException;
 
 trait CustomerBillableTrait
@@ -8,7 +8,7 @@ trait CustomerBillableTrait
 	/**
 	 * Return the gateway customer object for this user.
 	 *
-	 * @return Mmanos\Billing\Gateways\CustomerInterface
+	 * @return DorellJames\Billing\Gateways\CustomerInterface
 	 */
 	public function gatewayCustomer()
 	{

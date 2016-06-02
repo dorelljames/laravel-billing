@@ -1,6 +1,6 @@
-<?php namespace Mmanos\Billing\Gateways\Braintree;
+<?php namespace DorellJames\Billing\Gateways\Braintree;
 
-use Mmanos\Billing\Gateways\SubscriptionInterface;
+use DorellJames\Billing\Gateways\SubscriptionInterface;
 use Illuminate\Support\Arr;
 use Braintree_Customer;
 use Braintree_Subscription;

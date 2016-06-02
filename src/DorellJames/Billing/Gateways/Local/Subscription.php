@@ -1,6 +1,6 @@
-<?php namespace Mmanos\Billing\Gateways\Local;
+<?php namespace DorellJames\Billing\Gateways\Local;
 
-use Mmanos\Billing\Gateways\SubscriptionInterface;
+use DorellJames\Billing\Gateways\SubscriptionInterface;
 use Illuminate\Support\Arr;
 use Carbon\Carbon;
 

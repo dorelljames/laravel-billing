@@ -1,4 +1,4 @@
-<?php namespace Mmanos\Billing;
+<?php namespace DorellJames\Billing;
 
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\ServiceProvider;
@@ -34,11 +34,11 @@ class BillingServiceProvider extends ServiceProvider
 		$this->app->bindShared('billing.gateway', function ($app) {
 			switch (Config::get('laravel-billing::default')) {
 				case 'stripe':
-					return new \Mmanos\Billing\Gateways\Stripe\Gateway;
+					return new \DorellJames\Billing\Gateways\Stripe\Gateway;
 				case 'braintree':
-					return new \Mmanos\Billing\Gateways\Braintree\Gateway;
+					return new \DorellJames\Billing\Gateways\Braintree\Gateway;
 				case 'local':
-					return new \Mmanos\Billing\Gateways\Local\Gateway;
+					return new \DorellJames\Billing\Gateways\Local\Gateway;
 				default:
 					return null;
 			}

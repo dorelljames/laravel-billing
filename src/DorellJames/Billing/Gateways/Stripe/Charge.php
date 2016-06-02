@@ -1,6 +1,6 @@
-<?php namespace Mmanos\Billing\Gateways\Stripe;
+<?php namespace DorellJames\Billing\Gateways\Stripe;
 
-use Mmanos\Billing\Gateways\ChargeInterface;
+use DorellJames\Billing\Gateways\ChargeInterface;
 use Illuminate\Support\Arr;
 use Stripe_Customer;
 use Stripe_Charge;

@@ -1,4 +1,4 @@
-<?php namespace Mmanos\Billing;
+<?php namespace DorellJames\Billing;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Str;

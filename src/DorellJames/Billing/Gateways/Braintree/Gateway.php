@@ -1,7 +1,7 @@
-<?php namespace Mmanos\Billing\Gateways\Braintree;
+<?php namespace DorellJames\Billing\Gateways\Braintree;
 
-use Mmanos\Billing\Gateways\GatewayInterface;
-use Mmanos\Billing\Gateways\CustomerInterface;
+use DorellJames\Billing\Gateways\GatewayInterface;
+use DorellJames\Billing\Gateways\CustomerInterface;
 use Illuminate\Support\Facades\Config;
 use Braintree_Configuration;
 

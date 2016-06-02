@@ -1,4 +1,4 @@
-<?php namespace Mmanos\Billing\CustomerBillableTrait;
+<?php namespace DorellJames\Billing\CustomerBillableTrait;
 
 use Illuminate\Support\Arr;
 
@@ -14,7 +14,7 @@ class Charge
 	/**
 	 * Charge gateway instance.
 	 *
-	 * @var \Mmanos\Billing\Gateways\ChargeInterface
+	 * @var \DorellJames\Billing\Gateways\ChargeInterface
 	 */
 	protected $charge;
 
@@ -36,11 +36,11 @@ class Charge
 	 * Create a new CustomerBillableTrait Charge instance.
 	 *
 	 * @param \Illuminate\Database\Eloquent\Model      $model
-	 * @param \Mmanos\Billing\Gateways\ChargeInterface $charge
+	 * @param \DorellJames\Billing\Gateways\ChargeInterface $charge
 	 *
 	 * @return void
 	 */
-	public function __construct(\Illuminate\Database\Eloquent\Model $model, \Mmanos\Billing\Gateways\ChargeInterface $charge)
+	public function __construct(\Illuminate\Database\Eloquent\Model $model, \DorellJames\Billing\Gateways\ChargeInterface $charge)
 	{
 		$this->model = $model;
 		$this->charge = $charge;

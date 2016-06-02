@@ -1,4 +1,4 @@
-<?php namespace Mmanos\Billing\Gateways;
+<?php namespace DorellJames\Billing\Gateways;
 
 interface InvoiceInterface
 {

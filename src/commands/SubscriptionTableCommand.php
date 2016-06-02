@@ -1,4 +1,4 @@
-<?php namespace Mmanos\Billing;
+<?php namespace DorellJames\Billing;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Str;
@@ -58,7 +58,7 @@ class SubscriptionTableCommand extends Command
 	 */
 	protected function getMigrationStub()
 	{
-		$stub = file_get_contents(__DIR__.'/../Mmanos/Billing/Stubs/SubscriptionMigration.stub');
+		$stub = file_get_contents(__DIR__.'/../DorellJames/Billing/Stubs/SubscriptionMigration.stub');
 
 		$stub = str_replace('subscription_table', $this->argument('table'), $stub);
 		$stub = str_replace(

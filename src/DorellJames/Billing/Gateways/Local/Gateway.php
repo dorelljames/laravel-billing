@@ -1,7 +1,7 @@
-<?php namespace Mmanos\Billing\Gateways\Local;
+<?php namespace DorellJames\Billing\Gateways\Local;
 
-use Mmanos\Billing\Gateways\GatewayInterface;
-use Mmanos\Billing\Gateways\CustomerInterface;
+use DorellJames\Billing\Gateways\GatewayInterface;
+use DorellJames\Billing\Gateways\CustomerInterface;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Schema;

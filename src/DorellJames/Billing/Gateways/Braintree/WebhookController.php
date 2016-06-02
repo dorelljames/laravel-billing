@@ -1,11 +1,11 @@
-<?php namespace Mmanos\Billing\Gateways\Braintree;
+<?php namespace DorellJames\Billing\Gateways\Braintree;
 
 use Illuminate\Support\Facades\Input;
 use Symfony\Component\HttpFoundation\Response;
-use Mmanos\Billing\Facades\Billing;
+use DorellJames\Billing\Facades\Billing;
 use Braintree_WebhookNotification;
 
-class WebhookController extends \Mmanos\Billing\Gateways\WebhookController
+class WebhookController extends \DorellJames\Billing\Gateways\WebhookController
 {
 	/**
 	 * Handle a Braintree webhook call.

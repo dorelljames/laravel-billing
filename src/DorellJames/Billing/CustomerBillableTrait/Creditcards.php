@@ -1,4 +1,4 @@
-<?php namespace Mmanos\Billing\CustomerBillableTrait;
+<?php namespace DorellJames\Billing\CustomerBillableTrait;
 
 use Illuminate\Support\Arr;
 

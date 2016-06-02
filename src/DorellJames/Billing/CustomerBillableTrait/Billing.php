@@ -1,4 +1,4 @@
-<?php namespace Mmanos\Billing\CustomerBillableTrait;
+<?php namespace DorellJames\Billing\CustomerBillableTrait;
 
 use Illuminate\Support\Arr;
 use Exception;
@@ -15,7 +15,7 @@ class Billing
 	/**
 	 * Customer gateway instance.
 	 *
-	 * @var \Mmanos\Billing\Gateways\CustomerInterface
+	 * @var \DorellJames\Billing\Gateways\CustomerInterface
 	 */
 	protected $customer;
 
@@ -74,7 +74,7 @@ class Billing
 			return $this;
 		}
 
-		$this->customer = \Mmanos\Billing\Facades\Billing::customer()->create(array_merge($properties, array(
+		$this->customer = \DorellJames\Billing\Facades\Billing::customer()->create(array_merge($properties, array(
 			'coupon'     => $this->coupon,
 			'card_token' => $this->card_token,
 		)));

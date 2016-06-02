@@ -1,6 +1,6 @@
-<?php namespace Mmanos\Billing\Gateways\Stripe;
+<?php namespace DorellJames\Billing\Gateways\Stripe;
 
-use Mmanos\Billing\Gateways\SubscriptionInterface;
+use DorellJames\Billing\Gateways\SubscriptionInterface;
 use Illuminate\Support\Arr;
 use Stripe_Customer;
 use Stripe_Subscription;

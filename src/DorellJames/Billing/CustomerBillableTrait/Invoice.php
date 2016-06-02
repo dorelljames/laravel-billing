@@ -1,4 +1,4 @@
-<?php namespace Mmanos\Billing\CustomerBillableTrait;
+<?php namespace DorellJames\Billing\CustomerBillableTrait;
 
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\View;
@@ -15,7 +15,7 @@ class Invoice
 	/**
 	 * Invoice gateway instance.
 	 *
-	 * @var \Mmanos\Billing\Gateways\InvoiceInterface
+	 * @var \DorellJames\Billing\Gateways\InvoiceInterface
 	 */
 	protected $invoice;
 
@@ -30,11 +30,11 @@ class Invoice
 	 * Create a new CustomerBillableTrait Invoice instance.
 	 *
 	 * @param \Illuminate\Database\Eloquent\Model       $model
-	 * @param \Mmanos\Billing\Gateways\InvoiceInterface $invoice
+	 * @param \DorellJames\Billing\Gateways\InvoiceInterface $invoice
 	 *
 	 * @return void
 	 */
-	public function __construct(\Illuminate\Database\Eloquent\Model $model, \Mmanos\Billing\Gateways\InvoiceInterface $invoice)
+	public function __construct(\Illuminate\Database\Eloquent\Model $model, \DorellJames\Billing\Gateways\InvoiceInterface $invoice)
 	{
 		$this->model = $model;
 		$this->invoice = $invoice;

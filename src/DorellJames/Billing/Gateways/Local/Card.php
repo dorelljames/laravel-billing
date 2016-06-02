@@ -1,6 +1,6 @@
-<?php namespace Mmanos\Billing\Gateways\Local;
+<?php namespace DorellJames\Billing\Gateways\Local;
 
-use Mmanos\Billing\Gateways\CardInterface;
+use DorellJames\Billing\Gateways\CardInterface;
 use Illuminate\Support\Arr;
 
 class Card implements CardInterface

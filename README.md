@@ -23,14 +23,14 @@ It currently comes bundled with drivers for these billing services:
 Add this to your composer.json file, in the require object:
 
 ```javascript
-"mmanos/laravel-billing": "dev-master"
+"DorellJames/laravel-billing": "dev-master"
 ```
 
 After that, run composer install to install the package.
 
 #### Service Provider
 
-Register the `Mmanos\Billing\BillingServiceProvider` in your `app` configuration file.
+Register the `DorellJames\Billing\BillingServiceProvider` in your `app` configuration file.
 
 #### Dependencies
 
@@ -46,7 +46,7 @@ The following composer dependencies are needed for the listed billing gateways:
 Publish the default config file to your application so you can make modifications.
 
 ```console
-$ php artisan config:publish mmanos/laravel-billing
+$ php artisan config:publish DorellJames/laravel-billing
 ```
 
 #### Customer Migration
@@ -82,7 +82,7 @@ Once the migration has been created, simply run the `migrate` command.
 Next, add the CustomerBillableTrait to your customer model definition:
 
 ```php
-use Mmanos\Billing\CustomerBillableTrait;
+use DorellJames\Billing\CustomerBillableTrait;
 
 class User extends Eloquent
 {
@@ -115,7 +115,7 @@ public function subscriptionmodels()
 Then, add the SubscriptionBillableTrait to your subscription model definition(s):
 
 ```php
-use Mmanos\Billing\SubscriptionBillableTrait;
+use DorellJames\Billing\SubscriptionBillableTrait;
 
 class Website extends Eloquent
 {
@@ -589,10 +589,10 @@ To enable these events, just point a route to the appropriate gateway controller
 
 ```php
 // Stripe.
-Route::post('stripe/webhook', 'Mmanos\Billing\Gateways\Stripe\WebhookController@handleWebhook');
+Route::post('stripe/webhook', 'DorellJames\Billing\Gateways\Stripe\WebhookController@handleWebhook');
 
 // Braintree.
-Route::post('braintree/webhook', 'Mmanos\Billing\Gateways\Braintree\WebhookController@handleWebhook');
+Route::post('braintree/webhook', 'DorellJames\Billing\Gateways\Braintree\WebhookController@handleWebhook');
 ```
 
 By default, this package does not try to delete a subscription after a certain number of failed payment attempts. Most billing gateways can do this automatically which would trigger a deleted subscription webhook event. When that happens, we will update our local model to record that change in status.
@@ -602,7 +602,7 @@ By default, this package does not try to delete a subscription after a certain n
 If you have additional webhook events you would like to handle, simply extend the Webhook controller and point the route to your controller.
 
 ```php
-class WebhookController extends Mmanos\Billing\Gateways\Stripe\WebhookController
+class WebhookController extends DorellJames\Billing\Gateways\Stripe\WebhookController
 {
 	public function handleChargeDisputeCreated($payload)
 	{

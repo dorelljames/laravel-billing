@@ -1,7 +1,7 @@
-<?php namespace Mmanos\Billing\Gateways\Stripe;
+<?php namespace DorellJames\Billing\Gateways\Stripe;
 
-use Mmanos\Billing\Gateways\GatewayInterface;
-use Mmanos\Billing\Gateways\CustomerInterface;
+use DorellJames\Billing\Gateways\GatewayInterface;
+use DorellJames\Billing\Gateways\CustomerInterface;
 use Illuminate\Support\Facades\Config;
 use Stripe;
 

@@ -1,11 +1,11 @@
-<?php namespace Mmanos\Billing\Gateways\Stripe;
+<?php namespace DorellJames\Billing\Gateways\Stripe;
 
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Carbon\Carbon;
 
-class WebhookController extends \Mmanos\Billing\Gateways\WebhookController
+class WebhookController extends \DorellJames\Billing\Gateways\WebhookController
 {
 	/**
 	 * Handle a Stripe webhook call.

@@ -1,4 +1,4 @@
-<?php namespace Mmanos\Billing\CustomerBillableTrait;
+<?php namespace DorellJames\Billing\CustomerBillableTrait;
 
 use Illuminate\Support\Arr;
 
@@ -91,7 +91,7 @@ class Subscriptions
 		$subscriptions = array();
 
 		foreach ($this->model->subscriptionModelsArray() as $subscription) {
-			$subscriptions[] = new \Mmanos\Billing\SubscriptionBillableTrait\Subscription(
+			$subscriptions[] = new \DorellJames\Billing\SubscriptionBillableTrait\Subscription(
 				$subscription,
 				$subscription->gatewaySubscription(),
 				null,
@@ -118,7 +118,7 @@ class Subscriptions
 	/**
 	 * Find and return the first credit card.
 	 *
-	 * @return \Mmanos\Billing\SubscriptionBillableTrait\Subscription
+	 * @return \DorellJames\Billing\SubscriptionBillableTrait\Subscription
 	 */
 	public function first()
 	{
@@ -130,7 +130,7 @@ class Subscriptions
 	 *
 	 * @param mixed $id
 	 *
-	 * @return \Mmanos\Billing\SubscriptionBillableTrait\Subscription
+	 * @return \DorellJames\Billing\SubscriptionBillableTrait\Subscription
 	 */
 	public function find($id)
 	{
@@ -149,7 +149,7 @@ class Subscriptions
 	 * @param \Illuminate\Database\Eloquent\Model $model
 	 * @param array                               $properties
 	 *
-	 * @return \Mmanos\Billing\SubscriptionBillableTrait\Subscription
+	 * @return \DorellJames\Billing\SubscriptionBillableTrait\Subscription
 	 */
 	public function create(\Illuminate\Database\Eloquent\Model $model, array $properties = array())
 	{

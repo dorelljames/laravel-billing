@@ -1,4 +1,4 @@
-<?php namespace Mmanos\Billing\Gateways\Local\Models;
+<?php namespace DorellJames\Billing\Gateways\Local\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletingTrait;
@@ -11,6 +11,6 @@ class Card extends Model
 
 	public function customer()
 	{
-		return $this->belongsTo('Mmanos\Billing\Gateways\Local\Models\Customer')->withTrashed();
+		return $this->belongsTo('DorellJames\Billing\Gateways\Local\Models\Customer')->withTrashed();
 	}
 }

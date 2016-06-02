@@ -1,6 +1,6 @@
-<?php namespace Mmanos\Billing\SubscriptionBillableTrait;
+<?php namespace DorellJames\Billing\SubscriptionBillableTrait;
 
-use Mmanos\Billing\Facades\Billing;
+use DorellJames\Billing\Facades\Billing;
 use Illuminate\Support\Arr;
 use Exception;
 
@@ -16,7 +16,7 @@ class Subscription
 	/**
 	 * Charge gateway instance.
 	 *
-	 * @var \Mmanos\Billing\Gateways\SubscriptionInterface
+	 * @var \DorellJames\Billing\Gateways\SubscriptionInterface
 	 */
 	protected $subscription;
 
@@ -73,13 +73,13 @@ class Subscription
 	 * Create a new SubscriptionBillableTrait Subscription instance.
 	 *
 	 * @param \Illuminate\Database\Eloquent\Model            $model
-	 * @param \Mmanos\Billing\Gateways\SubscriptionInterface $subscription
+	 * @param \DorellJames\Billing\Gateways\SubscriptionInterface $subscription
 	 * @param mixed                                          $plan
 	 * @param array                                          $info
 	 *
 	 * @return void
 	 */
-	public function __construct(\Illuminate\Database\Eloquent\Model $model, \Mmanos\Billing\Gateways\SubscriptionInterface $subscription = null, $plan = null, array $info = null)
+	public function __construct(\Illuminate\Database\Eloquent\Model $model, \DorellJames\Billing\Gateways\SubscriptionInterface $subscription = null, $plan = null, array $info = null)
 	{
 		if (null === $plan) {
 			$plan = $model->billing_plan;

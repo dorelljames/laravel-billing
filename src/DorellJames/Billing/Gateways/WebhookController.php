@@ -1,4 +1,4 @@
-<?php namespace Mmanos\Billing\Gateways;
+<?php namespace DorellJames\Billing\Gateways;
 
 use Illuminate\Routing\Controller;
 use Symfony\Component\HttpFoundation\Response;
@@ -14,7 +14,7 @@ class WebhookController extends Controller
 	 */
 	protected function getCustomer($stripe_id)
 	{
-		return \Mmanos\Billing\EloquentBillableRepository::findCustomer($stripe_id);
+		return \DorellJames\Billing\EloquentBillableRepository::findCustomer($stripe_id);
 	}
 
 	/**
@@ -26,7 +26,7 @@ class WebhookController extends Controller
 	 */
 	protected function getSubscription($stripe_id)
 	{
-		return \Mmanos\Billing\EloquentBillableRepository::findSubscription($stripe_id);
+		return \DorellJames\Billing\EloquentBillableRepository::findSubscription($stripe_id);
 	}
 
 	/**

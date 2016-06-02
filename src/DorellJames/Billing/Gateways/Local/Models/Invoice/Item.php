@@ -1,4 +1,4 @@
-<?php namespace Mmanos\Billing\Gateways\Local\Models\Invoice;
+<?php namespace DorellJames\Billing\Gateways\Local\Models\Invoice;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletingTrait;
@@ -13,11 +13,11 @@ class Item extends Model
 
 	public function invoice()
 	{
-		return $this->belongsTo('Mmanos\Billing\Gateways\Local\Models\Invoice')->withTrashed();
+		return $this->belongsTo('DorellJames\Billing\Gateways\Local\Models\Invoice')->withTrashed();
 	}
 
 	public function subscription()
 	{
-		return $this->belongsTo('Mmanos\Billing\Gateways\Local\Models\Subscription')->withTrashed();
+		return $this->belongsTo('DorellJames\Billing\Gateways\Local\Models\Subscription')->withTrashed();
 	}
 }

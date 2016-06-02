@@ -1,6 +1,6 @@
-<?php namespace Mmanos\Billing\Gateways\Local;
+<?php namespace DorellJames\Billing\Gateways\Local;
 
-use Mmanos\Billing\Gateways\ChargeInterface;
+use DorellJames\Billing\Gateways\ChargeInterface;
 use Illuminate\Support\Arr;
 
 class Charge implements ChargeInterface
